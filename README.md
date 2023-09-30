@@ -58,12 +58,23 @@ The dataset consists of a substantial number of rows (14,999) and columns (13), 
 
 - Objective:
 The primary objective of this dataset appears to be predicting user retention or churn based on user behavior and characteristics.
+
 ## Modeling and Evaluation
-...
+![](./Images/feature_imortance.png)
 
-<!-- ![](./Images/feature_importances.png) -->
+Engineered features accounted for six of the top 10 features: km_per_hour, percent_sessions_in_last_month, total_sessions_per_day, percent_of_drives_to_favorite, km_per_drive, km_per_driving_day.
 
+The XGBoost model fit the data better than the random forest model. Additionally, it’s important to call out that the recall score (17%) is nearly double the score from the previous logistic regression model built in Milestone 5, while still maintaining a similar accuracy and precision score. 
 
+The ensembles of tree-based models in this project milestone are more valuable than a singular logistic regression model because they achieve higher scores across all evaluation metrics and require less preprocessing of the data. However, it is more difficult to understand how they make their predictions.
 
 ## Conclusion
-..
+In conclusion, this project represents a significant step forward for Waze in its ongoing efforts to enhance user retention and growth. By developing a machine learning model to predict user churn, we have equipped Waze with a powerful tool to better understand, anticipate, and ultimately reduce churn among its user base.
+
+Our analysis revealed critical insights into the factors influencing user churn. Engineered features such as km_per_hour, percent_sessions_in_last_month, total_sessions_per_day, percent_of_drives_to_favorite, km_per_drive, and km_per_driving_day emerged as essential contributors to our predictive model's accuracy. This demonstrates the value of feature engineering in capturing meaningful patterns within the data.
+
+Furthermore, our choice of the XGBoost model over the random forest model proved to be a wise decision, as it outperformed the previous logistic regression model significantly. Notably, the recall score improved substantially, highlighting our model's ability to identify users at risk of churn.
+
+The use of ensemble tree-based models offers a robust and effective approach to churn prediction, achieving higher scores across all evaluation metrics without requiring extensive data preprocessing. However, it's important to acknowledge the inherent complexity in interpreting the decision-making process of these models.
+
+This project aligns with Waze's overarching goal of enhancing user satisfaction, improving retention rates, and ultimately growing the business. By leveraging the insights gained from this machine learning model, Waze is well-positioned to implement targeted strategies to retain users and provide them with an even more valuable navigation experience. As we move forward, ongoing monitoring and refinement of the model will be crucial to ensure its continued effectiveness in reducing user churn and contributing to Waze's continued success.
